@@ -1,6 +1,6 @@
 ### Commom Utils
 
-The Util reduce code size, help to code quickly.
+The Util reduces code size and helps to code quickly.
 
 
 ### Configuration Local NPM 
