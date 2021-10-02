@@ -2,23 +2,26 @@
 
 The Util reduce code size, help to code quickly.
 
-### Installation
 
-1. Npm
-``` sh
-yarn add @creatorsn/common-utils # npm install @creatorsn/common-utils
+### Configuration Local NPM 
+
+.npmrc
+``` properties
+@creator-sn:registry=https://npm.pkg.github.com
 ```
 
-2. Git source
+### Installation
+
+1. NPM Github
 ``` sh
-yarn add https://github.com/Creator-SN/common-utils.git  # npm install https://github.com/Creator-SN/common-utils.git
+yarn add @creator-sn/common-utils # npm install @creator-sn/common-utils
 ```
 
 
 ### Usage
 
 ```js
-import { DomUtil, CookieUtil, NotificationUtil, SystemUtil } from '@creatorsn/common-utils';
+import { DomUtil, CookieUtil, NotificationUtil, SystemUtil } from '@creator-sn/common-utils';
 ```
 
 ### Development

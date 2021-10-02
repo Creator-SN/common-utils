@@ -1,7 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 module.exports = {
-    entry: './test/index.test.ts',
+    entry: './tests/index.sepc.ts',
     output: {
         path: path.resolve(__dirname, "lib/js"),
         filename: 'tests/test.bundle.js'
@@ -25,7 +25,6 @@ module.exports = {
     ],
     devServer: {
         liveReload: true,
-        open: true,
         port: 9001,
         open:"/tests"
     }

@@ -11,7 +11,7 @@ class DOMUtil {
         // 将element的位置移出到屏幕外,并令其显示
         let style: Record<string, string> = {
             display: 'block',
-            transition: 'none',
+            transition: 'none', // 关闭所有的动画效果
             visibility: 'hidden',
         };
         for (let key in style) {

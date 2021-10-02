@@ -32,6 +32,17 @@ class SystemUtil {
         const media = window.matchMedia('(prefers-color-scheme: dark)');
         media.removeEventListener('change', handler);
     }
+
+    /**
+     * 获取用户系统语言
+     * @returns 系统的语言
+     */
+    public static getLanguage(): string {
+        if (navigator == undefined) {
+            throw new Error('navigator undefined!');
+        }
+        return navigator.language;
+    }
 }
 
 export default SystemUtil;
