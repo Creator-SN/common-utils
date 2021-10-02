@@ -33,7 +33,7 @@ class CookieUtil {
         document.cookie = cookie;
     }
     /**
-     * 获取已存取的值，如果不存在，则返回undefined 
+     * 获取已存取的值，如果不存在，则返回undefined
      * @param key 键
      * @returns 值
      */

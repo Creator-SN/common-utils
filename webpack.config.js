@@ -1,12 +1,12 @@
 const path = require('path')
-const webpack = require('webpack')
 module.exports = {
     entry: './src/index.ts',
+    mode: "production",
     output: {
-        path: path.resolve(__dirname, "dist/js"),
-        filename: 'bundle.js'
+        path: path.resolve(__dirname, "lib"),
+        filename: 'index.js',
+        clean: true
     },
-    devtool: 'inline-source-map',
     module: {
         rules: [  // 添加解析规则
             {
@@ -15,17 +15,9 @@ module.exports = {
                 exclude: /node_modules/,
             },
         ]
-
     },
+    devtool: false,
     resolve: {   // 需要打包的文件后缀
         extensions: [".tsx", ".ts", ".js"]
     },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ],
-    devServer: {
-        liveReload: true,
-        open: true,
-        port: 9000
-    }
 }
