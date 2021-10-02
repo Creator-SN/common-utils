@@ -19,13 +19,14 @@ class NotificationUtil {
      * @param options 通知选项
      * @returns 如果成功发送通知，则显示正常通知对象，否则返回undefined
      */
-    public static send(title: string, options?: NotificationOptions): Notification | undefined {
+    public static async send(title: string, options?: NotificationOptions): Promise<Notification | undefined> {
         if (window == undefined || window.Notification == undefined) return undefined;
-        NotificationUtil.request();
-        if (Notification.permission == 'granted') {
-            return new Notification(title, options);
-        }
-        return undefined;
+        return await NotificationUtil.request().then(async () => {
+            if (Notification.permission === 'granted') {
+                return new Notification(title, options);
+            }
+            return undefined;
+        });
     }
 }
 
