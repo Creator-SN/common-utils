@@ -1,4 +1,9 @@
 class DOMUtil {
+    /**
+     * 获取HTML element真实的边界
+     * @param element HTML element
+     * @returns
+     */
     public static getBoundingClientRect(element: HTMLElement): DOMRect {
         if (window == undefined) {
             throw new Error('window undefined!');
@@ -26,6 +31,20 @@ class DOMUtil {
             element.style.setProperty(key, style[key]);
         }
         return rect;
+    }
+
+    /**
+     * 下载文件
+     * @param file 文件，可以使用new File创建File
+     */
+    public static download(file: File) {
+        let url = URL.createObjectURL(file);
+        const a = document.createElement('a');
+        a.download = file.name;
+        console.log(file)
+        a.href = url;
+        a.click();
+        a.remove();
     }
 }
 

@@ -9,6 +9,7 @@
         "*.test.ts"
     ],
     "compilerOptions": {
+        "lib": ["ES2015", "DOM"],
         "declaration": true, // 包含声明文件
         "importHelpers": true,
         "forceConsistentCasingInFileNames": true,
