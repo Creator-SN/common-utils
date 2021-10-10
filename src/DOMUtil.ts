@@ -2,7 +2,7 @@ class DOMUtil {
     /**
      * 获取HTML element真实的边界
      * @param element HTML element
-     * @returns
+     * @returns 返回同HTMLElement.getBoundingClientRect
      */
     public static getBoundingClientRect(element: HTMLElement): DOMRect {
         if (window == undefined) {
@@ -41,7 +41,6 @@ class DOMUtil {
         let url = URL.createObjectURL(file);
         const a = document.createElement('a');
         a.download = file.name;
-        console.log(file)
         a.href = url;
         a.click();
         a.remove();
