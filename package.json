@@ -1,6 +1,6 @@
 {
   "name": "@creator-sn/common-utils",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "js common utils",
   "main": "./lib/index.js",
   "author": "creatorsn",
